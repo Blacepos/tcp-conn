@@ -68,7 +68,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "tcp-conn"
+name = "tcp_conn"
 version = "0.1.0"
 dependencies = [
  "serde",
