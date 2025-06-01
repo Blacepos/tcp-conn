@@ -23,7 +23,7 @@ let stream = std::net::TcpStream::connect(...).unwrap();
 let mut conn = TcpConn::new(stream).unwrap();
 
 // define message
-let msg = &MyType::Greet { greeting: "hello".to_string() };
+let msg = MyType::Greet { greeting: "hello".to_string() };
 
 // send message
 conn.send::<MyType>(&msg).unwrap();
