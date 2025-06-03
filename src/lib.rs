@@ -146,9 +146,8 @@ impl TcpConn {
     /// This function blocks regardless of the blocking state.
     /// 
     /// # Errors
-    /// This function may return `TcpConnError::Incomplete`,
-    /// `TcpConnError::Timeout`, `TcpConnError::Socket`, or
-    /// `TcpConnError::Corrupt`.
+    /// This function may return `TcpConnError::Timeout`,
+    /// `TcpConnError::Socket`, or `TcpConnError::Corrupt`.
     pub fn receive_timeout<T>(&mut self, timeout: Duration)
      -> Result<T, TcpConnError>
     where T: DeserializeOwned {
